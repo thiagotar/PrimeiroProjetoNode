@@ -10,8 +10,6 @@ module.exports = {
 
     async create(request, response){
         const data = request.body;
-        console.log(data);
-
         data.id = genarateUniqueiId();
 
         await connection('ongs').insert(data);
